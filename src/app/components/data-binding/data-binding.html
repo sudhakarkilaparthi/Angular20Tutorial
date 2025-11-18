@@ -1,0 +1,16 @@
+<table style="width: 100%;">
+      <tr>
+            <td>
+                  {{courseName}}
+            </td>
+            <td>
+                  {{productPrice | currency:'INR':'symbol':'1.0-0'}}
+            </td>
+            <td>
+                  <input type="text" [maxLength]="maxLength" [minLength]="minLength"  />
+            </td>
+            <td>
+                  <input type="text" [(ngModel)]="courseName" />
+            </td>
+      </tr>
+</table>
