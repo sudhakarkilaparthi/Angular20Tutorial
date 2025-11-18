@@ -1,3 +1,68 @@
-<p>user works!</p>
-<input type="text" placeholder="Enter your name"/>
-<button class="btn btn-success" >Submit</button>
+<div class="row">
+    <div class="col-7">
+        <div class="card">
+            <div class="card-header bg-success">
+                User Lists
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Email ID</th>
+                            <th>Fullname</th>
+                            <th>Mobile No</th>
+                            <th>Password</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (item of usersList; track $index) {
+                        <tr>
+                            <td>{{item.userId}}</td>
+                            <td>{{item.emailId}}</td>
+                            <td>{{item.fullName}}</td>
+                            <td>{{item.mobileNo}}</td>
+                            <td>{{item.password}}</td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-5">
+        <div class="card">
+            <div class="card-header bg-success">
+                New User
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <label for="">Email</label>
+                        <input type="text" class="form-control" placeholder="" [(ngModel)]="userObj.emailId" />
+                    </div>
+                    <div class="col-6">
+                        <label for="">Password</label>
+                        <input type="text" class="form-control" placeholder="" [(ngModel)]="userObj.password" />
+                    </div>
+                    <div class="col-6">
+                        <label for="">Fullname</label>
+                        <input type="text" class="form-control" placeholder="" [(ngModel)]="userObj.fullName" />
+                    </div>
+                    <div class="col-6">
+                        <label for="">Mobile</label>
+                        <input type="text" class="form-control" placeholder="" [(ngModel)]="userObj.mobileNo" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <button class="btn btn-secondary">Reset</button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-success" (click)="OnSaveUser()">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
