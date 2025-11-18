@@ -17,3 +17,38 @@
         <button class="btn btn-success" (click)="toggleDiv2Bg()">Toggle Color</button>
     </div>
 </div>
+<div class="row">
+    <div class="col-3 mt-3">
+        firstName = {{firstName }} <br>
+        firstName = {{firstName | uppercase }} <br>
+    </div>
+    <div class="col-3 mt-3">
+        courseName = {{courseName }} <br>
+        courseName = {{courseName | lowercase }} <br>
+    </div>
+    <div class="col-3 mt-3">
+        courseName = {{courseName }} <br>
+        courseName = {{courseName | titlecase }} <br>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        rollNoList = {{rollNoList}} <br>
+        rollNoList = {{rollNoList | slice:1:4}} <br>
+        rollNoList = {{rollNoList | slice:4}} <br>
+    </div>
+    <div class="col-3">
+        studentDetails = {{studentDetails}} <br>
+        {{studentDetails | json}} <br>
+    </div>
+    <div class="col-3">
+        currentDate = {{currentDate}} <br>
+        {{currentDate | date}} <br>
+        {{currentDate | date:'dd-MM-yyyy'}} <br>
+        {{currentDate | date:'dd-MMM-yyyy'}} <br>
+        {{currentDate | date:'dd-MMMM-yyyy'}}<br>
+        {{currentDate | date:'short'}} <br>
+        {{currentDate | date:'full'}} <br>
+
+    </div>
+</div>
