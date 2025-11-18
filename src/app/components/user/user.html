@@ -13,6 +13,7 @@
                             <th>Fullname</th>
                             <th>Mobile No</th>
                             <th>Password</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -23,6 +24,11 @@
                             <td>{{item.fullName}}</td>
                             <td>{{item.mobileNo}}</td>
                             <td>{{item.password}}</td>
+                            <td>
+                                <button class="btn btn-sm btn-primary" (click)="OnEditUser(item)">Edit</button>
+                                <button class="btn btn-sm btn-danger"
+                                    (click)="OnDeleteUser(item.userId)">Delete</button>
+                            </td>
                         </tr>
                         }
                     </tbody>
@@ -56,10 +62,15 @@
                 </div>
                 <div class="row">
                     <div class="col-6">
-                        <button class="btn btn-secondary">Reset</button>
+                        <button class="btn btn-secondary" (click)="OnReset()">Reset</button>
                     </div>
                     <div class="col-6">
+                        @if (userObj.userId == 0) {
                         <button class="btn btn-success" (click)="OnSaveUser()">Save</button>
+                        }
+                        @else {
+                        <button class="btn btn-warning" (click)="OnUpdateUser()">Update</button>
+                        }
                     </div>
                 </div>
             </div>
