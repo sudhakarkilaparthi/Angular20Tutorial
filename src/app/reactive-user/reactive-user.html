@@ -47,10 +47,31 @@
                         <div class="col-6">
                             <label for="">Email</label>
                             <input formControlName="emailId" type="text" class="form-control" placeholder="" />
+                            @if (userForm.controls['emailId'].touched) {
+                            <div class="text-danger">
+                                @if (userForm.controls['emailId'].errors?.['required']) {
+                                <span>This is Required</span>
+                                }
+                                @if (userForm.controls['emailId'].errors?.['email']) {
+                                <span>Invalid email format</span>
+                                }
+                            </div>
+                            }
                         </div>
                         <div class="col-6">
                             <label for="">Password</label>
                             <input formControlName="password" type="text" class="form-control" placeholder="" />
+                            @if (userForm.controls['password'].touched) {
+                            <div class="text-danger">
+                                @if (userForm.controls['password'].errors?.['required']) {
+                                <span>This is Required</span>
+                                }
+                                @if (userForm.controls['password'].errors?.['minlength']) {
+                                <span>Minimum 4 char required</span>
+                                }
+
+                            </div>
+                            }
                         </div>
                         <div class="col-6">
                             <label for="">Fullname</label>
@@ -63,7 +84,8 @@
                     </div>
                     <div class="row">
                         <div class="col-6">
-                            <button class="btn btn-success" (click)="OnSaveUser()">Save</button>
+                            <button class="btn btn-success" [disabled]="userForm.invalid"
+                                (click)="OnSaveUser()">Save</button>
                             <!--                             
                                 <button class="btn btn-secondary" (click)="OnReset()">Reset</button>
                             </div>
