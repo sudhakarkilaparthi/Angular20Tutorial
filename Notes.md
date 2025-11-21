@@ -4,6 +4,6 @@ Angular practice notes
 
 ## To be cover
 
--[] Input
--[] Output
--[] @Defer block
+- [ ] Input
+- [ ] Output
+- [ ] @Defer block
