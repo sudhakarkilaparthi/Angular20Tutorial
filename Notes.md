@@ -4,6 +4,16 @@ Angular practice [Learning Partner](https://www.youtube.com/watch?v=oInuPuLVB6Y&
 
 ## To be cover
 
+- [*] [Resourse API](https://www.youtube.com/watch?v=LtlbIaFmUu0)
+- [*] rdResourse API
 - [ ] Input
 - [ ] Output
 - [ ] @Defer block
+
+### operators like
+
+- [ ] map
+- [ ] switchMap
+- [ ] debounceTime
+
+** What is SSR-friendly data fetching? **

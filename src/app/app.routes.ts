@@ -8,33 +8,47 @@ import { AttDirective } from './components/att-directive/att-directive';
 import { GetApi } from './components/get-api/get-api';
 import { ReactiveUser } from './components/reactive-user/reactive-user';
 import { PipeEx } from './components/pipe-ex/pipe-ex';
+import { ResourceAPI } from './components/resource-api/resource-api';
 
 export const routes: Routes = [
-      {
-            path: 'admin', component: Admin
-      },
-      {
-            path: 'control-flow-statement', component: ControlFlow
-      },
-      {
-            path: 'user', component: User
-      },
-      {
-            path: 'data-binding', component: DataBinding
-      },
-      {
-            path: 'signal-ex', component: SignalEx
-      },
-      {
-            path: 'attribute-dir', component: AttDirective
-      },
-      {
-            path: 'get-api', component: GetApi
-      },
-      {
-            path: 'reactive-users', component: ReactiveUser
-      },
-      {
-            path: 'pipe', component: PipeEx
-      }
+  {
+    path: 'admin',
+    component: Admin,
+  },
+  {
+    path: 'control-flow-statement',
+    component: ControlFlow,
+  },
+  {
+    path: 'user',
+    component: User,
+  },
+  {
+    path: 'data-binding',
+    component: DataBinding,
+  },
+  {
+    path: 'signal-ex',
+    component: SignalEx,
+  },
+  {
+    path: 'attribute-dir',
+    component: AttDirective,
+  },
+  {
+    path: 'get-api',
+    component: GetApi,
+  },
+  {
+    path: 'reactive-users',
+    component: ReactiveUser,
+  },
+  {
+    path: 'pipe',
+    component: PipeEx,
+  },
+  {
+    path: 'resource',
+    component: ResourceAPI,
+  },
 ];
