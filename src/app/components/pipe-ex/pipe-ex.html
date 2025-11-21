@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-3">
+    <p>{{ courseName }}</p>
+    <p>After uppercase => {{ courseName | uppercase }}</p>
+    <p>After lowercase => {{ courseDuration | lowercase }}</p>
+  </div>
+  <div class="col-4">
+    <p>Original Date: {{ currentDate }}</p>
+    <p>Date: {{ currentDate | date }}</p>
+    <p>Short Date: {{ currentDate | date : 'short' }}</p>
+    <p>Full Date: {{ currentDate | date : 'fullDate' }}</p>
+    <p>Custome format Date: {{ currentDate | date : 'dd-MMM-yyyy' }}</p>
+  </div>
+  <div class="col-3">
+    <p>{{ numberList }}</p>
+    <p>after slice: {{ numberList | slice : 0 : 5 }}</p>
+    <p>after slice: {{ numberList | slice : 2 }}</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-4">Student: {{ studentObj | json }}</div>
+</div>
+<div class="row">
+  <div class="col-4">Name: {{ studentObj.name | na }}</div>
+</div>
+<div class="row">
+  <div class="col-4">
+    <div class="col-4">Name: {{ studentObj.email | na }}</div>
+  </div>
+</div>
